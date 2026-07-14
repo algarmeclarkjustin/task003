@@ -26,5 +26,17 @@ nav a {
     gap: 20px;
 }
 
+.about {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
+.image img {
+    width: 250px;
+    border-radius: 10px;
+}
 
+.text {
+    font-size: 18px;
+}
