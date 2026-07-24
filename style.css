@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
     font-family: "Poppins", Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #222;
     background-color: #f5f8fc;
+    font-size: clamp(0.95rem, 1vw, 1rem);
 }
 
 header {
@@ -19,8 +24,9 @@ header {
 }
 
 header h1 {
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-size: clamp(1.8rem, 5vw, 3rem);
     letter-spacing: 0.08em;
+    line-height: 1.1;
 }
 
 nav {
@@ -35,6 +41,7 @@ nav a {
     color: #fff;
     margin: 0 14px;
     padding: 8px 0;
+    font-size: clamp(0.9rem, 1vw, 1rem);
     transition: color 0.25s ease;
 }
 
@@ -59,6 +66,29 @@ nav a:hover {
 .card h2,
 .card h3 {
     color: #1f3a5a;
+    margin-bottom: 16px;
+}
+
+.card h2 {
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+}
+
+.card h3 {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.card p,
+.card li {
+    font-size: clamp(0.95rem, 1vw, 1.05rem);
+    line-height: 1.75;
+}
+
+.card p {
+    margin-bottom: 1rem;
+}
+
+.card ul {
+    margin-top: 0.75rem;
 }
 
 .about,
@@ -168,6 +198,23 @@ footer {
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 7vw, 2.2rem);
+    }
+
+    .card {
+        padding: 20px 16px;
+    }
+
+    .card h2 {
+        font-size: 1.6rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p,
+    .card li {
+        font-size: 1rem;
     }
 }
