@@ -6,81 +6,168 @@
 
 body {
     font-family: "Poppins", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f5f8fc;
 }
 
 header {
-    background-color: skyblue;
-    color: white;
+    background-color: #63b8f4;
+    color: #fff;
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px;
 }
 
 header h1 {
-    font-size: 25px;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    letter-spacing: 0.08em;
 }
 
-
 nav {
-    background-color: grey;
+    background-color: #5a5a5a;
     text-align: center;
-    padding: 14px;
+    padding: 18px 20px;
 }
 
 nav a {
+    display: inline-block;
     text-decoration: none;
-    color: white;
-    margin: 20px;
-    text-decoration: solid;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
+    color: #fff;
+    margin: 0 14px;
+    padding: 8px 0;
+    transition: color 0.25s ease;
 }
 
 nav a:hover {
-    color: rgb(91, 219, 236);
+    color: #adebf6;
+}
+
+.container {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+    padding: 28px 30px;
+    margin-bottom: 24px;
+}
+
+.card h2,
+.card h3 {
+    color: #1f3a5a;
+}
+
+.about,
+.story,
+.hobbie {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .about {
-    display: flex;
     align-items: center;
-    gap: 30px;
 }
 
-.image img {
-    width: 200px;
-    height: 200px;
+.about img {
+    width: min(100%, 280px);
+    height: auto;
+    border-radius: 16px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .text {
     flex: 1;
+    min-width: 260px;
 }
 
 .story {
-    display: flex;
-    gap: 40px;
     text-align: justify;
 }
 
-.left {
+.left,
+.right,
+.hobbies-left,
+.hobbie-right {
     flex: 1;
-}
-
-.right {
-    flex: 1;
+    min-width: 260px;
 }
 
 .hobbie {
-    display: flex;
     justify-content: space-between;
-    gap: 50px;
 }
 
-.hobbies-left,
-.hobbie-right {
-    width: 50%;
+ul {
+    padding-left: 20px;
+    margin-top: 12px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 22px 20px;
+    text-align: center;
+    color: #555;
+}
+
+@media (max-width: 900px) {
+    .story,
+    .hobbie,
+    .about {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 36px 16px;
+    }
+
+    nav {
+        padding: 14px 16px;
+    }
+
+    nav a {
+        margin: 8px 10px;
+    }
+
+    .card {
+        padding: 22px 18px;
+    }
+
+    .story,
+    .hobbie,
+    .about {
+        flex-direction: column;
+    }
+
+    .about img,
+    .left,
+    .right,
+    .hobbies-left,
+    .hobbie-right,
+    .text {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    nav a {
+        display: block;
+        width: 100%;
+        margin: 6px 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
 }
